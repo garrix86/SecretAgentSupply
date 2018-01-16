@@ -21,7 +21,6 @@ header {
   background: black;
   display: flex;
   justify-content: center;
-
 }
 
 .logo {
@@ -107,7 +106,6 @@ nav li, a {
 }
 
 /*-----------product_grid-----------*/
-
 .product_grid {
   display: flex;
   justify-content: center;
@@ -121,7 +119,8 @@ height: auto;
 }
 
 /*boxe*/
-.boxe {
+.boxe1, .boxe2,
+.boxe3{
   width: 30%;
   height: auto;
   display: flex;
@@ -131,7 +130,7 @@ height: auto;
   border: 4px solid black;
 }
 
-.boxe .photo {
+.boxes .photo {
   background-color: white;
   width: 100%;
   height: 9rem;
@@ -140,14 +139,14 @@ height: auto;
   margin: 2rem 1rem;
 }
 
-.boxe .text {
+.boxes .text {
   background-color: black;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.boxe p {
+.boxes p {
   display: inline-block;
   padding: 0.5rem 0;
 }
@@ -155,8 +154,8 @@ height: auto;
  img {
    display: block;
    max-height: 100%;
-   max-width: 100%;
-
+   max-width: auto;
+   overflow: hidden;
 }
 
 /*Details*/
@@ -191,11 +190,71 @@ height: auto;
 }
 
 /*-----------Footer-----------*/
-
 footer {
   height: 5rem;
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*-----------Media Query----------*/
+@media only screen and (max-width: 1024px){
+  .boxe1,
+  .boxe2 {
+    width: 47%;
+  }
+
+  .boxe3 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 470px){
+  .main_banner span{
+    font-size: 0.77rem;
+    margin-top: 1rem;
+  }
+
+  .main_banner h1{
+    font-size: 1rem;
+  }
+
+  .main_banner {
+    height: 15rem;
+  }
+
+  .boxe2 {
+    display: none;
+  }
+
+  .boxe1 {
+    width: 90%;
+    margin-top: 3rem;
+  }
+
+  .boxes {
+    display: flex;
+    justify-content: center;
+  }
+
+  .details .case {
+    display: inline-flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  .hours,
+  .location {
+    width: 90%;
+  }
+
+  .location {
+    margin-bottom: 0.5rem;
+  }
+
+  footer .case p{
+    display: inline-flex;
+    justify-content: center;
+  }
 }
