@@ -233,6 +233,10 @@ footer {
 }
 
 @media only screen and (max-width: 470px){
+  .case{
+    width: 100%;
+  }
+
   .main_banner span{
     font-size: 0.77rem;
     margin-top: 1rem;
